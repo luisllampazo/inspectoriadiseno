@@ -225,7 +225,7 @@
   // Select2 Initialize
   // Select2 without the search
   if($().select2) {
-    $('select.select2').select2({
+    $('.select2').select2({
       minimumResultsForSearch: Infinity,
       placeholder: 'Elija una',
 	  width: '100%'
