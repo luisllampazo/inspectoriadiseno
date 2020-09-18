@@ -853,8 +853,8 @@
           <p class="br-section-text">A basic form control with disabled and readonly mode.</p>
 
           <div class="row">
-            <div class="col-lg">
-              <input class="form-control" placeholder="Input box" type="text">
+            <div class="col-lg-12">
+              <input class="form-control input-tags" type="text">
             </div><!-- col -->
             <div class="col-lg mg-t-10 mg-lg-t-0">
               <input class="form-control" placeholder="Input box (readonly)" readonly="" type="text">
@@ -1370,7 +1370,7 @@ $('#ssnMask').mask('999-99-9999');</code></pre>
           <h6 class="br-section-label">Input Tags</h6>
           <p class="br-section-text">User interface for managing tags.</p>
 
-          <input type="text" value="Amsterdam,Washington,Sydney,Beijing,Cairo" data-role="tagsinput">
+          <input type="text" data-role="">
 
           <p class="br-section-label-sm">Source Code</p>
           <pre><code class="html pd-20">&lt;input type="text" value="Amsterdam,Washington,Sydney,Beijing,Cairo" data-role="tagsinput"&gt;</code></pre>
@@ -1553,6 +1553,7 @@ $('#ssnMask').mask('999-99-9999');</code></pre>
     <script src="lib/timepicker/jquery.timepicker.min.js"></script>
     <script src="lib/spectrum-colorpicker/spectrum.js"></script>
     <script src="lib/jquery.maskedinput/jquery.maskedinput.js"></script>
+	      <script src="https://cdnjs.cloudflare.com/ajax/libs/typeahead.js/0.11.1/typeahead.bundle.min.js"></script>
     <script src="lib/bootstrap-tagsinput/bootstrap-tagsinput.min.js"></script>
     <script src="lib/ion-rangeslider/js/ion.rangeSlider.min.js"></script>
 
@@ -1643,9 +1644,32 @@ $('#ssnMask').mask('999-99-9999');</code></pre>
               to: 500,
               step: 250
           });
-        }
-
+        };
+var cities = new Bloodhound({
+  datumTokenizer: Bloodhound.tokenizers.obj.whitespace('text'),
+  queryTokenizer: Bloodhound.tokenizers.whitespace,
+  prefetch: 'assets/cities.json'
+});
+cities.initialize();
+		  var elt = $('.input-tags');
+//		elt = $('.example_objects_as_tags > > input');
+elt.tagsinput({
+  itemValue: 'value',
+  itemText: 'text',
+  typeaheadjs: {
+    name: 'cities',
+    displayKey: 'text',
+    source: cities.ttAdapter()
+  }
+});
+elt.tagsinput('add', { "value": 1 , "text": "Amsterdam"   , "continent": "Europe"    });
+elt.tagsinput('add', { "value": 4 , "text": "Washington"  , "continent": "America"   });
+elt.tagsinput('add', { "value": 7 , "text": "Sydney"      , "continent": "Australia" });
+elt.tagsinput('add', { "value": 10, "text": "Beijing"     , "continent": "Asia"      });
+elt.tagsinput('add', { "value": 13, "text": "Cairo"       , "continent": "Africa"    });
       });
+
+
     </script>
   </body>
 </html>

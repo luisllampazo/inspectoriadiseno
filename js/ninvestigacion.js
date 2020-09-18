@@ -30,7 +30,12 @@
           showOtherMonths: true,
           selectOtherMonths: true
         });
+	 $('.fc-datepicker-button').datepicker({
+          showOtherMonths: true,
+          selectOtherMonths: true
+        });
 	 $('#datatable2').DataTable({
+		  searching: false,
 		           responsive: true,
 		 bLengthChange: false,
           language: {
@@ -44,5 +49,6 @@
 	 $('#dateregistromask').mask('99/99/9999');
 	 $('#datehtmask').mask('99/99/9999');
 	  $('#nrohtmask').mask('9999999999?-*');
+	 $('#text-docinicio').mask('9999-9999');
 	 
  });
