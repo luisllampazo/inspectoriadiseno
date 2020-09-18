@@ -50,5 +50,19 @@
 	 $('#datehtmask').mask('99/99/9999');
 	  $('#nrohtmask').mask('9999999999?-*');
 	 $('#text-docinicio').mask('9999-9999');
-	 
+	  $('.modal-effect').on('click', function(e){
+          e.preventDefault();
+
+          var effect = $(this).attr('data-effect');
+          $('#modaldemo8').addClass(effect);
+          $('#modaldemo8').modal('show');
+        });
+
+        // hide modal with effect
+        $('#modaldemo8').on('hidden.bs.modal', function (e) {
+          $(this).removeClass (function (index, className) {
+              return (className.match (/(^|\s)effect-\S+/g) || []).join(' ');
+          });
+        });
+	 $("#datatable-pnp").dataTable();
  });
