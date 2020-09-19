@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- Meta -->
+    <meta name="description" content="Sistema Integral de Segumiento de Expedientes Administrativo Disciplinarias.">
+    <meta name="author" content="UNITIC IG PNP">
+
+    <title>IG PNP - Sistema Integrado de seguimiento de expedientes administrativo disciplinarias</title>
+
+    <!-- vendor css -->
+    <link href="lib/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+	<link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+	<link href="lib/highlightjs/styles/github.css" rel="stylesheet">
+	<link href="lib/select2/css/select2.min.css" rel="stylesheet">
+    <link href="lib/ion-rangeslider/css/ion.rangeSlider.css" rel="stylesheet">
+    <link href="lib/ion-rangeslider/css/ion.rangeSlider.skinFlat.css" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/css/bootstrap4-toggle.min.css" rel="stylesheet">
+<!-- Bracket CSS -->
+    <link rel="stylesheet" href="css/bracket.css">
+  </head>
+
+  <body>
+
+    <!-- ########## START: LEFT PANEL ########## -->
+    <div class="br-logo"><a href=""><span>[</span>SISEAD <i>IG PNP</i><span>]</span></a></div>
+    <div class="br-sideleft sideleft-scrollbar">
+      <label class="sidebar-label pd-x-10 mg-t-20 op-3">Navigation</label>
+      <ul class="br-sideleft-menu">
+        <li class="br-menu-item">
+          <a href="index.html" class="br-menu-link">
+            <i class="menu-item-icon icon ion-ios-home-outline tx-24"></i>
+            <span class="menu-item-label">Bienvenida</span>
+          </a><!-- br-menu-link -->
+        </li><!-- br-menu-item -->
+        
+        
+        <li class="br-menu-item">
+          <a href="#" class="br-menu-link with-sub active show-sub">
+            <i class="menu-item-icon ion-ios-pie-outline tx-20"></i>
+            <span class="menu-item-label">Estadística</span>
+          </a><!-- br-menu-link -->
+          <ul class="br-menu-sub">
+            <li class="sub-item"><a href="" class="sub-link active">Investigaciones AD</a></li>
+          </ul>
+        </li><!-- br-menu-item -->
+        
+        
+      </ul><!-- br-sideleft-menu -->
+	</div><!-- br-sideleft -->
+    <!-- ########## END: LEFT PANEL ########## -->
+
+    <!-- ########## START: HEAD PANEL ########## -->
+    <div class="br-header">
+      <div class="br-header-left">
+        <div class="navicon-left hidden-md-down"><a id="btnLeftMenu" href=""><i class="icon ion-navicon-round"></i></a></div>
+        <div class="navicon-left hidden-lg-up"><a id="btnLeftMenuMobile" href=""><i class="icon ion-navicon-round"></i></a></div>
+        
+      </div><!-- br-header-left -->
+      <div class="br-header-right">
+        <nav class="nav">
+          
+          
+          <div class="dropdown">
+            <a href="" class="nav-link nav-link-profile" data-toggle="dropdown">
+              <span class="logged-name hidden-md-down">Luis Ricardo</span>
+              <img src="https://via.placeholder.com/500" class="wd-32 rounded-circle" alt="">
+              <span class="square-10 bg-success"></span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-header wd-250">
+              <div class="tx-center">
+                <a href=""><img src="https://via.placeholder.com/500" class="wd-80 rounded-circle" alt=""></a>
+                <h6 class="logged-fullname">Luis Ricardo LLAMPAZO MANDAMIENTO</h6>
+                <p>CAPITAN S PNP</p>
+              </div>
+              <hr>
+              <div class="tx-center">
+                <span class="profile-earning-label">OFICINA DE DISCIPLINA 01</span>
+                <span class="profile-earning-text">ARAMBURU - LIMA</span>
+              </div>
+              <hr>
+              <ul class="list-unstyled user-profile-nav">
+                <li><a href=""><i class="icon ion-ios-person"></i> Editar Perfil</a></li>
+                <li><a href=""><i class="icon ion-ios-gear"></i> Configuracion</a></li>
+                <li><a href=""><i class="icon ion-power"></i> Cerrar Sesion</a></li>
+              </ul>
+            </div><!-- dropdown-menu -->
+          </div><!-- dropdown -->
+        </nav>
+        
+      </div><!-- br-header-right -->
+    </div><!-- br-header -->
+    <!-- ########## END: HEAD PANEL ########## -->
+
+    <!-- ########## START: RIGHT PANEL ########## -->
+    <div class="br-sideright">
+      <ul class="nav nav-tabs sidebar-tabs" role="tablist">
+        <li class="nav-item">
+          <a class="nav-link active" data-toggle="tab" role="tab" href="#contacts"><i class="icon ion-ios-contact-outline tx-24"></i></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="tab" role="tab" href="#attachments"><i class="icon ion-ios-folder-outline tx-22"></i></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="tab" role="tab" href="#calendar"><i class="icon ion-ios-calendar-outline tx-24"></i></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="tab" role="tab" href="#settings"><i class="icon ion-ios-gear-outline tx-24"></i></a>
+        </li>
+      </ul><!-- sidebar-tabs -->
+
+      <!-- Tab panes -->
+      
+
+    </div><!-- br-sideright -->
+    <!-- ########## END: RIGHT PANEL ########## --->
+
+    <!-- ########## START: MAIN PANEL ########## -->
+    <div class="br-mainpanel">
+      <div class="br-pageheader">
+        <nav class="breadcrumb pd-0 mg-0 tx-12">
+          <a class="breadcrumb-item" href="index.html">SISEAD</a>
+          <a class="breadcrumb-item" href="#">Estadistica</a>
+			<a class="breadcrumb-item" href="#">Investigaciones AD</a>
+          <span class="breadcrumb-item active">Nuevo Registro</span>
+        </nav>
+      </div><!-- br-pageheader -->
+      <div class="br-pagetitle">
+        <i class="icon icon ion-ios-bookmarks-outline"></i>
+        <div>
+          <h4>Registro de Investigaciones Administrativo Disciplinarias</h4>
+          <p class="mg-b-0">Investigaciones Administrativo Disciplinarias en etapa de acciones previas y con inicio de procedimiento.</p>
+        </div>
+      </div><!-- d-flex -->
+
+      <div class="br-pagebody">
+        <div class="br-section-wrapper">
+          <h6 class="br-section-label">REGISTRO DE INVESTIGACIONES ADMINISTRATIVAS DISCIPLINARIAS</h6>
+          <p class="br-section-text">Ingrese la informacion solicitada para registrar una Investigacion Administrativa Disciplinaria</p>
+		
+      <div id="wizardexp" class="mg-t-20">
+            <h3>Informacion Inicial</h3>
+            <section>
+              <div class="row mb-3">
+			<div class="col-lg-3">
+				<label>Comunicacion del Hecho</label>
+              <select class="form-control select2" data-placeholder="Choose one">
+                <option label="Elige Una"></option>
+                <option value="Firefox">Nota Informativa</option>
+                <option value="Chrome">Denuncia Regular</option>
+                <option value="Safari">Comunicacion Telefónica</option>
+              </select>
+            </div>
+			<div class="col-lg-2">
+				<label>Fecha  Comunicacion</label>
+
+				<div class="input-group">
+              <div class="input-group-prepend">
+                <div class="input-group-text">
+                  <i class="icon ion-calendar tx-16 lh-0 op-6"></i>
+                </div>
+              </div>
+              <input id="datecomunicacionmask" type="text" class="form-control fc-datepicker" placeholder="MM/DD/YYYY">
+            </div>
+
+            </div>
+			<div class="col-lg-3">
+				<label>Unidad que Recibe</label>
+              <select class="form-control select2" data-placeholder="Choose one">
+                <option label="Elige Una"></option>
+                <option value="Firefox">OD 01 - Aramburu</option>
+                <option value="Chrome">OD 02 - Aramburu</option>
+                <option value="Safari">OD 03 - Aramburu</option>
+              </select>
+            </div>
+			
+			<div class="col-lg-2">
+				<label>Fecha de Registro</label>
+
+				<div class="input-group">
+              <div class="input-group-prepend">
+                <div class="input-group-text">
+                  <i class="icon ion-calendar tx-16 lh-0 op-6"></i>
+                </div>
+              </div>
+              <input id="dateregistromask" type="text" class="form-control fc-datepicker" placeholder="MM/DD/YYYY">
+            </div>
+
+            </div>
+			<div class="col-lg-2">
+				<label>Tipo de Procedimiento</label>
+<input id="tprocedimiento" class="form-control" type="checkbox">
+            </div>
+			</div>
+			<div class="row mb-3">
+				<div class="col-lg-2">
+				<label>Nro de Hoja de Trámite</label>
+              <input id="nrohtmask" class="form-control datemask" placeholder="Nro de HT" type="text">
+            </div>
+			<div class="col-lg-2">
+				<label>Fecha de HT</label>
+
+				<div class="input-group">
+              <div class="input-group-prepend">
+                <div class="input-group-text">
+                  <i class="icon ion-calendar tx-16 lh-0 op-6"></i>
+                </div>
+              </div>
+              <input id="datehtmask" type="text" class="form-control fc-datepicker" placeholder="MM/DD/YYYY">
+            </div>
+
+            </div>
+			<div class="col-lg-2">
+				<label>Legislación</label>
+              <select class="form-control select2" data-placeholder="Choose one">
+                <option label="Elige Una"></option>
+                <option value="Firefox">Ley 30714</option>
+                <option value="Chrome">DL 1150</option>
+                <option value="Chrome">DL 1268</option>
+              </select>
+            </div>
+				<div class="col-lg-4 mg-t-20 mg-lg-t-0">
+					<label>Infracciones</label>
+              <select class="form-control select2" data-placeholder="Choose Browser" multiple>
+                <option value="Firefox">G-01</option>
+                <option value="Chrome selected">G-02</option>
+                <option value="Safari">G-03</option>
+                <option value="Opera" selected>MG-01</option>
+                <option value="Internet Explorer">MG-100</option>
+              </select>
+            </div>
+				<div class="col-lg-2">
+				<label>Clasificacion</label>
+              <select class="form-control select2" data-placeholder="Choose one">
+                <option label="Elige Una"></option>
+                <option value="Firefox">Ebriedad</option>
+                <option value="Chrome">Violencia Familiar</option>
+                <option value="Chrome">Perdida de Arma de Fuego</option>
+              </select>
+            </div>
+			</div>
+				<div class="row mb-3">
+					<div class="col-lg-4">
+				<label>Ubigeo del Hecho</label>
+              <select id="com_ubigeohecho" class="form-control select2" data-placeholder="Elige Una">
+                <option label="Elige Una"></option>
+                <option value="Firefox">Ebriedad</option>
+                <option value="Chrome">Violencia Familiar</option>
+                <option value="Chrome">Perdida de Arma de Fuego</option>
+              </select>
+            </div>
+					<div class="col-lg-4">
+				<label>Jurisdiccion Policial</label>
+              <select class="form-control select2" data-placeholder="Elige Una">
+                <option label="Elige Una"></option>
+                <option value="Firefox">Ebriedad</option>
+                <option value="Chrome">Violencia Familiar</option>
+                <option value="Chrome">Perdida de Arma de Fuego</option>
+              </select>
+            </div>
+				</div>
+            </section>
+            <h3>Informacion de la Investigacion</h3>
+            <section>
+              <div class="row mb-3">
+				  <div class="col-lg-2">
+				<label>Fecha Recepción (Unidad)</label>
+
+				<div class="input-group">
+              <div class="input-group-prepend">
+                <div class="input-group-text">
+                  <i class="icon ion-calendar tx-16 lh-0 op-6"></i>
+                </div>
+              </div>
+              <input type="text" class="form-control fc-datepicker" placeholder="MM/DD/YYYY">
+            </div>
+
+            </div>
+				  <div class="col-lg-2">
+				<label>Fecha Asignacion (Responsables)</label>
+
+				<div class="input-group">
+              <div class="input-group-prepend">
+                <div class="input-group-text">
+                  <i class="icon ion-calendar tx-16 lh-0 op-6"></i>
+                </div>
+              </div>
+              <input type="text" class="form-control fc-datepicker" placeholder="MM/DD/YYYY">
+            </div>
+
+            </div>
+				  <div class="col-lg-2">
+				  <label>Resolucion de Inicio</label>
+					<input id="text-docinicio" class="form-control" type="text">
+				  </div>
+				  <div class="col-lg-3">
+				<label>Unidad que Emite</label>
+              <select class="form-control select2" data-placeholder="Choose one">
+                <option label="Elige Una"></option>
+                <option value="Firefox">OD 01 - Aramburu</option>
+                <option value="Chrome">OD 02 - Aramburu</option>
+                <option value="Safari">OD 03 - Aramburu</option>
+              </select>
+            </div>
+				  <div class="col-lg-2">
+				<label>Fecha Resolucion</label>
+
+				<div class="input-group">
+              <div class="input-group-prepend">
+                <div class="input-group-text">
+                  <i class="icon ion-calendar tx-16 lh-0 op-6"></i>
+                </div>
+              </div>
+              <input type="text" class="form-control fc-datepicker" placeholder="MM/DD/YYYY">
+            </div>
+
+            </div>
+				</div>
+				<div class="row">
+					<div class="col-12 table-responsive">
+					<table class="table table-bordered bg-white">
+						<thead class="bg-light">
+							<tr>
+								<th>CARGO</th>
+								<th>GRADO</th>
+								<th>APELLIDOS Y NOMBRES</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th class="bg-light">Instructor</th>
+								<td></td>
+								<td class="p-0">
+									<select class="form-control select2"></select>
+								</td>
+							</tr>
+							<tr>
+								<th class="bg-light">Auxiliar</th>
+								<td></td>
+								<td class="p-0">
+									<select class="form-control select2"></select>
+								</td>
+							</tr>
+						</tbody>
+						</table>
+					</div>
+				</div>
+            </section>
+            <h3>Informacion de Investigados</h3>
+            <section>
+				<div class="row py-2">
+					<div class="col-lg-3">
+						 <a href="#" class="modal-effect btn btn-primary btn-block" data-effect="effect-flip-horizontal">Agregar Investigado</a>
+					</div>
+				</div>
+              <div class="table-responsive">
+            <table id="datatable" class="table table-bordered table-sm">
+              <thead class="bg-light">
+                <tr>
+                  <th>CIP</th>
+                  <th>GRADO</th>
+                  <th>APELLIDOS Y NOMBRES</th>
+                  <th>UNIDAD</th>
+                  <th >INFRACCIONES INVESTIGADAS</th>
+                  <th>FECHA DE ENTERADO</th>
+				  <th><i class="fa fa-trash-alt"></i></th>
+                </tr>
+              </thead>
+              <tbody class="bg-white">
+                <tr>
+                  <td>00354789</td>
+                  <td>CAP S</td>
+                  <td>LLAMPAZO MANDAMIENTO LUIS RICARDO</td>
+                  <td>IG PNP</td>
+                  <td><label class="badge badge-info">G-11</label></td>
+     			<td>	<input class="form-control fc-datepicker-button wd-100 form-control-sm"></td>
+				  <td><button class="btn btn-secondary btn-sm"><i class="fa fa-trash-alt"></i></button></td>
+                </tr>
+				  
+				  
+				  
+				 
+				  </tbody>
+            </table>
+          </div><!-- table-wrapper -->
+            </section>
+          </div>
+          
+          
+
+        </div><!-- br-section-wrapper -->
+      </div><!-- br-pagebody -->
+      <footer class="br-footer">
+        <div class="footer-left">
+          <div class="mg-b-2">Copyright &copy; 2020.</div>
+          <div>Desarrollado por la UNITIC SEC IG PNP.</div>
+        </div>
+        <div class="footer-right d-flex align-items-center">
+          
+        </div>
+      </footer>
+    </div><!-- br-mainpanel -->
+    <!-- ########## END: MAIN PANEL ########## -->
+
+	<script src="lib/jquery/jquery.min.js"></script>
+    <script src="lib/jquery-ui/ui/widgets/datepicker.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="lib/moment/min/moment.min.js"></script>
+    <script src="lib/peity/jquery.peity.min.js"></script>
+    <script src="lib/highlightjs/highlight.pack.min.js"></script>
+	  <script src="lib/select2/js/select2.min.js"></script>
+    <script src="lib/timepicker/jquery.timepicker.min.js"></script>
+    <script src="lib/spectrum-colorpicker/spectrum.js"></script>
+    <script src="lib/jquery.maskedinput/jquery.maskedinput.js"></script>
+    <script src="lib/ion-rangeslider/js/ion.rangeSlider.min.js"></script>
+    <script src="lib/jquery-steps/build/jquery.steps.min.js"></script>
+    <script src="lib/parsleyjs/parsley.min.js"></script>
+	<script src="lib/datatables.net/js/jquery.dataTables.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/js/bootstrap4-toggle.min.js"></script>
+	      <script src="js/menu.js"></script>
+<script>
+      $(document).ready(function(){
+        'use strict';
+        $('#wizardexp').steps({
+          headerTag: 'h3',
+          bodyTag: 'section',
+          autoFocus: true,
+          titleTemplate: '<span class="number">#index#</span> <span class="title">#title#</span>',
+          cssClass: 'wizard wizard-style-3'
+        });
+
+      });
+    </script>
+	 <script src="js/ninvestigacion.js"></script> 
+  </body>
+</html>

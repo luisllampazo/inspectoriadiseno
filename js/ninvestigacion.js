@@ -28,7 +28,8 @@
     });
 	 $('.fc-datepicker').datepicker({
           showOtherMonths: true,
-          selectOtherMonths: true
+          selectOtherMonths: true,
+		 dateFormat: 'dd/mm/yy'
         });
 	 $('.fc-datepicker-button').datepicker({
           showOtherMonths: true,
