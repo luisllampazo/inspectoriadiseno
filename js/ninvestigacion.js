@@ -35,17 +35,7 @@
           showOtherMonths: true,
           selectOtherMonths: true
         });
-	 $('#datatable2').DataTable({
-		  searching: false,
-		           responsive: true,
-		 bLengthChange: false,
-          language: {
-            searchPlaceholder: 'Buscar...',
-            sSearch: '',
-            }
-		 ,
-           autoWidth: false
-        });
+	 
 	  $('#datecomunicacionmask').mask('99/99/9999');
 	 $('#dateregistromask').mask('99/99/9999');
 	 $('#datehtmask').mask('99/99/9999');
@@ -65,5 +55,9 @@
               return (className.match (/(^|\s)effect-\S+/g) || []).join(' ');
           });
         });
-	 $("#datatable-pnp").dataTable();
+	 $('#table-investigados').DataTable({
+		 bLengthChange: false,
+          searching: false,
+          responsive: true
+	 });
  });
