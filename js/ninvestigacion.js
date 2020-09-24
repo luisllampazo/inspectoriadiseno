@@ -1,6 +1,7 @@
 // JavaScript Document
- 'use strict';
  $(document).ready(function(){
+ 'use strict';
+
 	 if($().select2) {
     $('.select2').select2({
       minimumResultsForSearch: Infinity,
@@ -31,7 +32,7 @@
           selectOtherMonths: true,
 		 dateFormat: 'dd/mm/yy'
         });
-	 $('.fc-datepicker-button').datepicker({
+	 $('#fc-datepicker-button').datepicker({
           showOtherMonths: true,
           selectOtherMonths: true
         });
@@ -60,4 +61,5 @@
           searching: false,
           responsive: true
 	 });
+	 
  });

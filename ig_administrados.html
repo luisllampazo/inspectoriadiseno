@@ -11,10 +11,14 @@
     <title>IG PNP - Sistema Integrado de seguimiento de expedientes administrativo disciplinarias</title>
 
     <!-- vendor css -->
-	<link href="lib/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link href="lib/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
 	<link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
-
-    <!-- Bracket CSS -->
+	<link href="lib/highlightjs/styles/github.css" rel="stylesheet">
+	<link href="lib/select2/css/select2.min.css" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/css/bootstrap4-toggle.min.css" rel="stylesheet">
+	<link href="lib/datatables.net-dt/css/jquery.dataTables.min.css" rel="stylesheet">
+    <link href="lib/datatables.net-responsive-dt/css/responsive.dataTables.min.css" rel="stylesheet">
+<!-- Bracket CSS -->
     <link rel="stylesheet" href="css/bracket.css">
   </head>
 
@@ -119,106 +123,112 @@
         <nav class="breadcrumb pd-0 mg-0 tx-12">
           <a class="breadcrumb-item" href="index.html">SISEAD</a>
           <a class="breadcrumb-item" href="#">Estadistica</a>
-          <span class="breadcrumb-item active">Investigaciones AD</span>
+			<a class="breadcrumb-item" href="#">Investigaciones AD</a>
+          <span class="breadcrumb-item active">Administrados</span>
         </nav>
       </div><!-- br-pageheader -->
       <div class="br-pagetitle">
-        <i class="icon icon ion-ios-bookmarks-outline"></i>
+        <i class="icon icon ion-document-text"></i>
         <div>
-          <h4>Registro de Investigaciones Administrativo Disciplinarias</h4>
-          <p class="mg-b-0">Investigaciones Administrativo Disciplinarias en etapa de acciones previas y con inicio de procedimiento.</p>
+          <h4>Investigación Administrativo Disciplinaria</h4>
+          <p>Registro Nr: 202055665656</p>
         </div>
       </div><!-- d-flex -->
 
       <div class="br-pagebody">
         <div class="br-section-wrapper">
-          <h6 class="br-section-label">INVESTIGACIONES ADMINISTRATIVAS DISCIPLINARIAS</h6>
-          
-		<button class="btn btn-info my-2"><i class="fa fa-magic"></i>Nuevo Registro</button>
-          <div class="bd bd-gray-300 rounded table-responsive">
-            <table class="table table-hover mg-b-0 ">
-              <thead>
-                <tr>
-                  <th>Nro Investigacion</th>
-                  <th>Nro de HT</th>
-				  <th>ORIGEN</th>
-                  <th>UBIGEO</th>
-                  <th>CLASIFICACION</th>
-				  <th>PROCEDIMIENTO</th>
-					<th>ETAPA</th>
-                  <th><i class="fa fa-cogs"></i></th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <th scope="row">2020245968465</th>
-                  <td>2020123456</td>
-                  <td>NOTA INFORMATIVA</td>
-                  <td>LIMA - LIMA - SAN MARTIN DE PORRAS</td>
-                  <td>PERDIDA DE ARMA DE FUEGO DEL ESTADO</td>
-					<td>SUMARIO</td>
-					<td></td>
-                  <td>
-                          <button type="button" class="btn btn-info btn-sm" data-toggle="tooltip" data-placement="top" title="Agregar Investigados"><i class="fas fa-user-plus"></i></button>
-					  <button type="button" class="btn btn-info btn-sm" data-toggle="tooltip" data-placement="top" title="Iniciar Procedimiento">
-						  <i class="fa fa-balance-scale"></i></button>
-					      <button type="button" class="btn btn-warning btn-sm" data-toggle="tooltip" data-placement="top" title="Cerrar Investigación"><i class="fas fa-door-closed"></i>
-</button>
-					</td>
-                </tr>
-                <tr>
-                  <th scope="row">2020245968465</th>
-                  <td>2020123456</td>
-                  <td>NOTA INFORMATIVA</td>
-                  <td>LIMA - LIMA - SAN MARTIN DE PORRAS</td>
-                  <td>PERDIDA DE ARMA DE FUEGO DEL ESTADO</td>
-					<td>SUMARIO</td>
-					<td></td>
-                  <td>
-                       <button type="button" class="btn btn-info btn-sm" data-toggle="tooltip" data-placement="top" title="Medida Preventiva"><i class="fa fa-gavel"></i></button>    
-					  <button type="button" class="btn btn-primary btn-sm" data-toggle="tooltip" data-placement="top" title="Terminar Investigacion"><i class="fas fa-sign-out-alt"></i></button>
-					  
-					     
-					</td>
-                </tr>
-                
-              </tbody>
-            </table>
-          </div><!-- table-wrapper -->
+          <h6 class="br-section-label">AGREGAR INVESTIGADO / ADMINISTRADO</h6>
+          <p class="br-section-text">Busque al personal PNP en la base de datos de la DIRREHUM PNP</p>
+		<div class="row pb-3">
+					  <div class="col-md-2">
+						  <label>CIP</label>
+						  <input class="form-control">
+					  </div>
+					  <div class="col-md-2">
+						  <label >DNI</label>
+						  <input class="form-control">
+					  </div>
+					  <div class="col-md-2">
+						  <label>APELLIDO PATERNO</label>
+						  <input class="form-control">
+					  </div>
+					  <div class="col-md-2">
+						  <label >APELLIDO MATERNO</label>
+						  <input class="form-control ">
+					  </div>
+					  <div class="col-md-2">
+						  <label >NOMBRES</label>
+						  <input class="form-control ">
+					  </div>
+					  <div class="col-md-2">
+						  <label>.</label>
+						  <button class="form-control btn btn-info btn-sm"> Buscar</button>
+					  </div>
+					</div>
+      <div class="table-responsive">
 			
-<div class="ht-80 bd d-flex align-items-center justify-content-center mg-t-20">
-            <ul class="pagination pagination-basic pagination-rounded mg-b-0">
-              <li class="page-item hidden-xs-down">
-                <a class="page-link" href="#" aria-label="First"><i class="fa fa-angle-double-left"></i></a>
-              </li>
-              <li class="page-item">
-                <a class="page-link" href="#" aria-label="Previous"><i class="fa fa-angle-left"></i></a>
-              </li>
-              <li class="page-item active"><a class="page-link" href="#">1</a></li>
-              <li class="page-item"><a class="page-link" href="#">2</a></li>
-              <li class="page-item hidden-xs-down"><a class="page-link" href="#">3</a></li>
-              <li class="page-item hidden-xs-down"><a class="page-link" href="#">4</a></li>
-              <li class="page-item disabled"><span class="page-link">...</span></li>
-              <li class="page-item"><a class="page-link" href="#">10</a></li>
-              <li class="page-item">
-                <a class="page-link" href="#" aria-label="Next"><i class="fa fa-angle-right"></i></a>
-              </li>
-              <li class="page-item hidden-xs-down">
-                <a class="page-link" href="#" aria-label="Last"><i class="fa fa-angle-double-right"></i></a>
-              </li>
-            </ul>
-          </div>
-          
+			<table id="datatable-pnp" class="table table-hover mg-b-0 ">
+				<thead>
+					<tr>
+						<th>CIP</th>
+						<th>GRADO</th>
+						<th>APELLIDOS Y NOMBRES</th>
+						<th>UNIDAD</th>
+						<th>MOTIVO</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>00391305</td>
+						<td>CAP S</td>
+						<td>LLAMPAZO MANDAMIENTO LUIS RICARDO</td>
+						<td>IG_UNITIC_SEC</td>
+						<td>REGISTRO ESTADISTICO</td>
+					</tr>
+					<tr>
+						<td>00391305</td>
+						<td>CAP S</td>
+						<td>LLAMPAZO MANDAMIENTO LUIS RICARDO</td>
+						<td>IG_UNITIC_SEC</td>
+						<td>INVESTIGACION</td>
+					</tr>
+				</tbody>
+				</table>
 
+        </div>
+		<div class="row"></div>
+			<div class="table-responsive">
+			
+			<table id="datatable-administrados" class="table table-hover mg-b-0 ">
+				<thead>
+					<tr>
+						<th>CIP</th>
+						<th>GRADO</th>
+						<th>APELLIDOS Y NOMBRES</th>
+						<th>UNIDAD</th>
+						<th>MOTIVO</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>00391305</td>
+						<td>CAP S</td>
+						<td>LLAMPAZO MANDAMIENTO LUIS RICARDO</td>
+						<td>IG_UNITIC_SEC</td>
+						<td>REGISTRO ESTADISTICO</td>
+					</tr>
+					<tr>
+						<td>00391305</td>
+						<td>CAP S</td>
+						<td>LLAMPAZO MANDAMIENTO LUIS RICARDO</td>
+						<td>IG_UNITIC_SEC</td>
+						<td>INVESTIGACION</td>
+					</tr>
+				</tbody>
+				</table>
 
-          
-          
-
-          
-
-          
-          
-
+        </div>
+			
         </div><!-- br-section-wrapper -->
       </div><!-- br-pagebody -->
       <footer class="br-footer">
@@ -233,19 +243,23 @@
     </div><!-- br-mainpanel -->
     <!-- ########## END: MAIN PANEL ########## -->
 
-	 <script src="lib/jquery/jquery.min.js"></script>
+	<script src="lib/jquery/jquery.min.js"></script>
+    <script src="lib/jquery-ui/ui/widgets/datepicker.js"></script>
     <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
-	      <script src="lib/perfect-scrollbar/perfect-scrollbar.min.js"></script>
     <script src="lib/moment/min/moment.min.js"></script>
     <script src="lib/peity/jquery.peity.min.js"></script>
     <script src="lib/highlightjs/highlight.pack.min.js"></script>
-	      <script src="js/menu.js"></script>
-<script>
-      $(function(){
-        'use strict';
-
-        
-      });
-    </script>
+	<script src="lib/select2/js/select2.min.js"></script>
+    <script src="lib/timepicker/jquery.timepicker.min.js"></script>
+    <script src="lib/jquery.maskedinput/jquery.maskedinput.js"></script>
+    <script src="lib/jquery-steps/build/jquery.steps.min.js"></script>
+    <script src="lib/parsleyjs/parsley.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/js/bootstrap4-toggle.min.js"></script>
+    <script src="lib/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="lib/datatables.net-dt/js/dataTables.dataTables.min.js"></script>
+    <script src="lib/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="lib/datatables.net-responsive-dt/js/responsive.dataTables.min.js"></script>
+	<script src="js/menu.js"></script>
+	<script src="js/administrados.js"></script> 
   </body>
 </html>
